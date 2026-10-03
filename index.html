@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sharma Clothes & Style - प्रीमियम फैशन स्टोर</title>
+    <!-- Google Fonts for professional look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for beautiful icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #ff4655; /* Modern Crimson/Coral Red */
+            --secondary-color: #1a1a2e; /* Dark elegant navy */
+            --text-color: #333333;
+            --light-bg: #f8f9fa;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-color);
+            background-color: #ffffff;
+            line-height: 1.6;
+        }
+
+        /* Hero / Navbar Section */
+        header {
+            background: linear-gradient(rgba(26, 26, 46, 0.85), rgba(26, 26, 46, 0.85)), url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .logo-icon {
+            font-size: 3rem;
+            color: var(--var-primary, #ff4655);
+            margin-bottom: 15px;
+            animation: bounce 2s infinite;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            font-size: 1.3rem;
+            font-weight: 300;
+            color: #ddd;
+            max-width: 600px;
+            margin: 0 auto 30px auto;
+        }
+
+        .badge {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 6px 15px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        /* Container styling */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            color: var(--secondary-color);
+            margin-bottom: 40px;
+            position: relative;
+            font-weight: 700;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 60px;
+            height: 4px;
+            background-color: var(--primary-color);
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        /* About Section */
+        .about-box {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 60px auto;
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        /* Grid / Cards Styling */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border: 1px solid #edf2f7;
+            text-align: center;
+            padding: 40px 25px;
+            position: relative;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(255, 70, 85, 0.15);
+            border-color: var(--primary-color);
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .card p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* Contact Section Luxury Box */
+        .contact-section {
+            background-color: var(--light-bg);
+            padding: 60px 20px;
+            border-radius: 20px;
+            margin-top: 50px;
+            box-shadow: inset 0 0 20px rgba(0,0,0,0.02);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+        }
+
+        .contact-item i {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-right: 15px;
+            background: #fff0f1;
+            padding: 12px;
+            border-radius: 10px;
+        }
+
+        .contact-item-text p {
+            margin: 0;
+        }
+        .contact-item-text strong {
+            display: block;
+            color: var(--secondary-color);
+            font-size: 0.9rem;
+        }
+
+        /* Call Button Animation */
+        .btn-holder {
+            text-align: center;
+            margin-top: 35px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #27ae60, #2ece71);
+            color: white;
+            text-decoration: none;
+            padding: 16px 40px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.2rem;
+            box-shadow: 0 6px 20px rgba(39, 174, 96, 0.3);
+            transition: all 0.3s ease;
+            border: none;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(39, 174, 96, 0.4);
+        }
+
+        .btn i {
+            margin-right: 8px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary-color);
+            color: #a0aec0;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 60px;
+            font-size: 0.9rem;
+            border-top: 3px solid var(--primary-color);
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+            40% {transform: translateY(-10px);}
+            60% {transform: translateY(-5px);}
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Premium Banner -->
+    <header>
+        <div class="logo-icon"><i class="fa-solid fa-shirt"></i></div>
+        <span class="badge">New Premium Collection Live</span>
+        <h1>Sharma Clothes & Style</h1>
+        <p>जहां फैशन और आधुनिकता का सही मेल होता है। आपके पूरे परिवार के लिए सबसे खूबसूरत और फैशनेबल कपड़ों का एकमात्र शोरूम।</p>
+    </header>
+
+    <div class="container">
+        <!-- About Section -->
+        <h2 class="section-title">हमारे बारे में</h2>
+        <div class="about-box">
+            <p>हम पिछले कई वर्षों से अपने ग्राहकों को सबसे बेहतरीन क्वालिटी और आधुनिक ट्रेंड्स के कपड़े उपलब्ध करा रहे हैं। शादी-ब्याह के भारी लहंगे-शेरवानी से लेकर रोज़ पहनने वाले कम्फर्टेबल कपड़ों तक, हमारे यहाँ सब कुछ एक ही छत के नीचे उचित दामों पर मिलता है।</p>
+        </div>
+
+        <!-- Categories Section -->
+        <h2 class="section-title">हमारा ख़ास कलेक्शन</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="card-icon"><i class="fa-solid fa-user-tie"></i></div>
+                <h3>Mens Wear</h3>
+                <p>ट्रेंडी जींस, फॉर्मल और कैजुअल शर्ट्स, कुर्ता-पायजामा, और शादी के लिए स्पेशल शेरवानी का शानदार कलेक्शन।</p>
+            </div>
+            <div class="card">
+                <div class="card-icon"><i class="fa-solid fa-person-dress"></i></div>
+                <h3>Ladies Wear</h3>
+                <p>डिज़ाइनर साड़ियां, फैंसी कुर्तियां, हैवी लेहेंगा, गाउन और वेस्टर्न ड्रेसेस का लेटेस्ट और खूबसूरत स्टॉक।</p>
+            </div>
+            <div class="card">
+                <div class="card-icon"><i class="fa-solid fa-child"></i></div>
+                <h3>Kids Wear</h3>
+                <p>बच्चों के लिए एकदम आरामदायक, सॉफ्ट फैब्रिक और कार्टून प्रिंट वाले फैशनेबल और कलरफुल कपड़े।</p>
+            </div>
+        </div>
+
+        <!-- Contact Box Section -->
+        <div class="contact-section">
+            <h2 class="section-title">शोरूम की जानकारी</h2>
+            
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div class="contact-item-text">
+                        <strong>दुकान का पता</strong>
+                        <p>दुकान नंबर 12, मुख्य बाज़ार, लखनऊ, उत्तर प्रदेश</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-solid fa-clock"></i>
+                    <div class="contact-item-text">
+                        <strong>खुलने का समय</strong>
+                        <p>सुबह 10:00 बजे से रात 9:00 बजे तक (सोमवार बंद)</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <div class="contact-item-text">
+                        <strong>फ़ोन नंबर</strong>
+                        <p>+91 9876543210</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Animated Call Button -->
+            <div class="btn-holder">
+                <a href="tel:+919876543210" class="btn"><i class="fa-solid fa-phone-flip"></i> दुकान मालिक को सीधे कॉल करें</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Sharma Clothes & Style. All Rights Reserved. | Designed for Growth</p>
+    </footer>
+
+</body>
+</html>
